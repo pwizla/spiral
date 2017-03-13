@@ -5,6 +5,7 @@
   <script type="text/javascript">
     function drawSpiral(size, ecartement) {
       // ecartement: the smaller the value, the tighter the spiral
+      if (!ecartement) {var ecartement = 3;}
       var c=document.getElementById("spiralCanvas");
       var c2d=c.getContext("2d");
       var centerX = 400;
@@ -28,7 +29,7 @@
       console.log("Rayon final de la spirale:", newX - centerX);
     }
 
-    drawSpiral(180, 5);
+    drawSpiral(350);
   </script>
   </body>
 </html>
