@@ -11,14 +11,14 @@
       var centerY = 400;
       c2d.moveTo(centerX, centerY);
 
-      var STEPS_PER_ROTATION = 720;
+      var STEPS_PER_ROTATION = 720; // the higher the value, the smoother the curve
       var increment = 2*Math.PI/STEPS_PER_ROTATION;
       var theta = increment;
       var newX = 400;
 
       while( newX - centerX < size ) {
-        var newX = (centerX + ecartement*theta * Math.cos(theta)).toFixed();
-        var newY = (centerY + ecartement*theta * Math.sin(theta)).toFixed(); 
+        var newX = (centerX + ecartement * theta * Math.cos(theta)).toFixed();
+        var newY = (centerY + ecartement * theta * Math.sin(theta)).toFixed(); 
         c2d.lineTo(newX, newY);
         theta = theta + increment;
       }
